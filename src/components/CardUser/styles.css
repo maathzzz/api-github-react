@@ -1,0 +1,50 @@
+.card-user{
+    color: white;
+    background-color: red;
+
+    margin-top: 60px;
+    margin-left: 80px;
+    border-radius: 20px;
+
+    width: 400px;
+    height: 140px;
+
+    /* background: #eecf45; */
+    background: #141321;
+
+    display: flex;
+}
+
+.text-user{
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.card-user h3 {
+    color: #fe428e;
+    display: flex;
+    justify-content: left;
+}
+
+.card-user h4 {
+    color: #eecf45;
+}
+
+.card-user h5 {
+    color: #eecf45;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 10px;
+
+    cursor: pointer;
+}
+
+.avatar:hover{
+    border-color: #eecf45;
+    transition: 200ms;
+}

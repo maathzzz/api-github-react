@@ -17,7 +17,8 @@
 
     border-radius: 8px;
 
-    background: #2b2350;
+    /* background: #2b2350; */
+    background: #141321;
     color: #fff;
 }
 
@@ -26,20 +27,25 @@
     margin-bottom: 5px;
     font-size: 30px;
     color: #58a6ff;
+    /* color: #fe428e; */
 }
 
 .repos h4 {
     color: #8b949e;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .repos a {
     margin-top: 10px;
     margin-bottom: 10px;
 
-    color: white;
+    color: #eecf45;
     display: flex;
     justify-content: space-between;
 }
