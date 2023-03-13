@@ -1,0 +1,45 @@
+.repos {
+    margin: 20px;
+}
+
+.repos li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 10px;
+    width: 550px;
+    height: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: #2b2350;
+    color: #fff;
+}
+
+.repos h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #58a6ff;
+}
+
+.repos h4 {
+    color: #8b949e;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.repos a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}

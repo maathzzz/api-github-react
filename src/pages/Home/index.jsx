@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import './styles.css';
+import Card from '../../components/Card';
 
 function Home() {
-  const [username, setUsername] = useState('maathzzz');
+  const [username, setUsername] = useState('maathzzz', {avatar: '', bio: ''});
   const [repositories, setRepositories] = useState([]);
 
   const handleSearch = () => {
 
-    axios.get(`https://api.github.com/users/${username}`)
+     axios.get(`https://api.github.com/users/${username}`)
       .then(response => {
         const user = response.data;
         axios.get(user.repos_url)
@@ -32,22 +33,17 @@ function Home() {
   return (
     <div className='container'>
       <div className='child'>
-
-        <h1> GitHub API - Search Repositories</h1>
-        <input type="text" placeholder="Type GitHub username..." value={username} onChange={event => setUsername(event.target.value)} />
-        <center><button onClick={handleSearch}>Search User</button></center>
-
-      </div>
-
-      <div className='repos'>
-      {repositories.map(repository => (
-        <div key={repository.id}>
-          <h3>{repository.name}</h3>
-          <a href={repository.html_url} target='_blank'><p>GitHub Link</p></a>
+        <div>
+          <h1> GitHub API - Search By User</h1>
+          <input type="text" 
+            placeholder="Type GitHub username..." 
+            value={username} 
+            onChange={event => setUsername(event.target.value)} 
+          />
+          <button className='search' onClick={handleSearch}>Search User</button>
         </div>
-      ))}
       </div>
-
+      <Card repositories={repositories} />
     </div>
   );
 }
